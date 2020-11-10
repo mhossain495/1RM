@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EC2A0FDB2558A549005069FA /* 1RM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1RM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2A0FDB2558A549005069FA /* 1 Rep Max.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1 Rep Max.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2A0FDE2558A549005069FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2A0FE02558A549005069FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC2A0FE22558A549005069FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		EC2A0FEA2558A54A005069FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC2A0FED2558A54A005069FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2A0FEF2558A54A005069FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC2A0FF42558A54A005069FA /* 1RMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1RMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2A0FF42558A54A005069FA /* 1 Rep MaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1 Rep MaxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2A0FF82558A54A005069FA /* _RMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _RMTests.swift; sourceTree = "<group>"; };
 		EC2A0FFA2558A54A005069FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC2A0FFF2558A54A005069FA /* 1RMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1RMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2A0FFF2558A54A005069FA /* 1 Rep MaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1 Rep MaxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2A10032558A54A005069FA /* _RMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _RMUITests.swift; sourceTree = "<group>"; };
 		EC2A10052558A54A005069FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +81,9 @@
 		EC2A0FD22558A549005069FA = {
 			isa = PBXGroup;
 			children = (
-				EC2A0FDD2558A549005069FA /* 1RM */,
-				EC2A0FF72558A54A005069FA /* 1RMTests */,
-				EC2A10022558A54A005069FA /* 1RMUITests */,
+				EC2A0FDD2558A549005069FA /* 1 Rep Max */,
+				EC2A0FF72558A54A005069FA /* 1 Rep Max Tests */,
+				EC2A10022558A54A005069FA /* 1 Rep Max UITests */,
 				EC2A0FDC2558A549005069FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +91,14 @@
 		EC2A0FDC2558A549005069FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC2A0FDB2558A549005069FA /* 1RM.app */,
-				EC2A0FF42558A54A005069FA /* 1RMTests.xctest */,
-				EC2A0FFF2558A54A005069FA /* 1RMUITests.xctest */,
+				EC2A0FDB2558A549005069FA /* 1 Rep Max.app */,
+				EC2A0FF42558A54A005069FA /* 1 Rep MaxTests.xctest */,
+				EC2A0FFF2558A54A005069FA /* 1 Rep MaxUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC2A0FDD2558A549005069FA /* 1RM */ = {
+		EC2A0FDD2558A549005069FA /* 1 Rep Max */ = {
 			isa = PBXGroup;
 			children = (
 				EC2A0FDE2558A549005069FA /* AppDelegate.swift */,
@@ -110,33 +110,33 @@
 				EC2A0FEF2558A54A005069FA /* Info.plist */,
 				EC2A0FE72558A549005069FA /* _RM.xcdatamodeld */,
 			);
-			path = 1RM;
+			path = "1 Rep Max";
 			sourceTree = "<group>";
 		};
-		EC2A0FF72558A54A005069FA /* 1RMTests */ = {
+		EC2A0FF72558A54A005069FA /* 1 Rep Max Tests */ = {
 			isa = PBXGroup;
 			children = (
 				EC2A0FF82558A54A005069FA /* _RMTests.swift */,
 				EC2A0FFA2558A54A005069FA /* Info.plist */,
 			);
-			path = 1RMTests;
+			path = "1 Rep Max Tests";
 			sourceTree = "<group>";
 		};
-		EC2A10022558A54A005069FA /* 1RMUITests */ = {
+		EC2A10022558A54A005069FA /* 1 Rep Max UITests */ = {
 			isa = PBXGroup;
 			children = (
 				EC2A10032558A54A005069FA /* _RMUITests.swift */,
 				EC2A10052558A54A005069FA /* Info.plist */,
 			);
-			path = 1RMUITests;
+			path = "1 Rep Max UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC2A0FDA2558A549005069FA /* 1RM */ = {
+		EC2A0FDA2558A549005069FA /* 1 Rep Max */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2A10082558A54A005069FA /* Build configuration list for PBXNativeTarget "1RM" */;
+			buildConfigurationList = EC2A10082558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep Max" */;
 			buildPhases = (
 				EC2A0FD72558A549005069FA /* Sources */,
 				EC2A0FD82558A549005069FA /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = 1RM;
+			name = "1 Rep Max";
 			productName = 1RM;
-			productReference = EC2A0FDB2558A549005069FA /* 1RM.app */;
+			productReference = EC2A0FDB2558A549005069FA /* 1 Rep Max.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC2A0FF32558A54A005069FA /* 1RMTests */ = {
+		EC2A0FF32558A54A005069FA /* 1 Rep MaxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2A100B2558A54A005069FA /* Build configuration list for PBXNativeTarget "1RMTests" */;
+			buildConfigurationList = EC2A100B2558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep MaxTests" */;
 			buildPhases = (
 				EC2A0FF02558A54A005069FA /* Sources */,
 				EC2A0FF12558A54A005069FA /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				EC2A0FF62558A54A005069FA /* PBXTargetDependency */,
 			);
-			name = 1RMTests;
+			name = "1 Rep MaxTests";
 			productName = 1RMTests;
-			productReference = EC2A0FF42558A54A005069FA /* 1RMTests.xctest */;
+			productReference = EC2A0FF42558A54A005069FA /* 1 Rep MaxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EC2A0FFE2558A54A005069FA /* 1RMUITests */ = {
+		EC2A0FFE2558A54A005069FA /* 1 Rep MaxUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2A100E2558A54A005069FA /* Build configuration list for PBXNativeTarget "1RMUITests" */;
+			buildConfigurationList = EC2A100E2558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep MaxUITests" */;
 			buildPhases = (
 				EC2A0FFB2558A54A005069FA /* Sources */,
 				EC2A0FFC2558A54A005069FA /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				EC2A10012558A54A005069FA /* PBXTargetDependency */,
 			);
-			name = 1RMUITests;
+			name = "1 Rep MaxUITests";
 			productName = 1RMUITests;
-			productReference = EC2A0FFF2558A54A005069FA /* 1RMUITests.xctest */;
+			productReference = EC2A0FFF2558A54A005069FA /* 1 Rep MaxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC2A0FD62558A549005069FA /* Build configuration list for PBXProject "1RM" */;
+			buildConfigurationList = EC2A0FD62558A549005069FA /* Build configuration list for PBXProject "1 Rep Max" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,9 +222,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC2A0FDA2558A549005069FA /* 1RM */,
-				EC2A0FF32558A54A005069FA /* 1RMTests */,
-				EC2A0FFE2558A54A005069FA /* 1RMUITests */,
+				EC2A0FDA2558A549005069FA /* 1 Rep Max */,
+				EC2A0FF32558A54A005069FA /* 1 Rep MaxTests */,
+				EC2A0FFE2558A54A005069FA /* 1 Rep MaxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,12 +289,12 @@
 /* Begin PBXTargetDependency section */
 		EC2A0FF62558A54A005069FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC2A0FDA2558A549005069FA /* 1RM */;
+			target = EC2A0FDA2558A549005069FA /* 1 Rep Max */;
 			targetProxy = EC2A0FF52558A54A005069FA /* PBXContainerItemProxy */;
 		};
 		EC2A10012558A54A005069FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC2A0FDA2558A549005069FA /* 1RM */;
+			target = EC2A0FDA2558A549005069FA /* 1 Rep Max */;
 			targetProxy = EC2A10002558A54A005069FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -491,7 +491,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1RM.app/1RM";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1 Rep Max.app/1 Rep Max";
 			};
 			name = Debug;
 		};
@@ -513,7 +513,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1RM.app/1RM";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1 Rep Max.app/1 Rep Max";
 			};
 			name = Release;
 		};
@@ -560,7 +560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC2A0FD62558A549005069FA /* Build configuration list for PBXProject "1RM" */ = {
+		EC2A0FD62558A549005069FA /* Build configuration list for PBXProject "1 Rep Max" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2A10062558A54A005069FA /* Debug */,
@@ -569,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2A10082558A54A005069FA /* Build configuration list for PBXNativeTarget "1RM" */ = {
+		EC2A10082558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep Max" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2A10092558A54A005069FA /* Debug */,
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2A100B2558A54A005069FA /* Build configuration list for PBXNativeTarget "1RMTests" */ = {
+		EC2A100B2558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep MaxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2A100C2558A54A005069FA /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2A100E2558A54A005069FA /* Build configuration list for PBXNativeTarget "1RMUITests" */ = {
+		EC2A100E2558A54A005069FA /* Build configuration list for PBXNativeTarget "1 Rep MaxUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2A100F2558A54A005069FA /* Debug */,
