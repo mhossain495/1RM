@@ -442,7 +442,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QS6TZ5BXX6;
-				INFOPLIST_FILE = 1RM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/1 Rep Max/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QS6TZ5BXX6;
-				INFOPLIST_FILE = 1RM/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/1 Rep Max/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
