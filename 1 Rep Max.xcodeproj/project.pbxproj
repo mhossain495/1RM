@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		EC2A0FDF2558A549005069FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FDE2558A549005069FA /* AppDelegate.swift */; };
 		EC2A0FE12558A549005069FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE02558A549005069FA /* SceneDelegate.swift */; };
-		EC2A0FE32558A549005069FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE22558A549005069FA /* ViewController.swift */; };
+		EC2A0FE32558A549005069FA /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE22558A549005069FA /* CalculateViewController.swift */; };
 		EC2A0FE62558A549005069FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FE42558A549005069FA /* Main.storyboard */; };
 		EC2A0FE92558A549005069FA /* _RM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE72558A549005069FA /* _RM.xcdatamodeld */; };
 		EC2A0FEB2558A54A005069FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FEA2558A54A005069FA /* Assets.xcassets */; };
 		EC2A0FEE2558A54A005069FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FEC2558A54A005069FA /* LaunchScreen.storyboard */; };
 		EC2A0FF92558A54A005069FA /* _RMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FF82558A54A005069FA /* _RMTests.swift */; };
 		EC2A10042558A54A005069FA /* _RMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A10032558A54A005069FA /* _RMUITests.swift */; };
+		ECBD5E11256CAB9C0073C152 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		EC2A0FDB2558A549005069FA /* 1 Rep Max.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1 Rep Max.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2A0FDE2558A549005069FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2A0FE02558A549005069FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC2A0FE22558A549005069FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC2A0FE22558A549005069FA /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		EC2A0FE52558A549005069FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC2A0FE82558A549005069FA /* _RM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _RM.xcdatamodel; sourceTree = "<group>"; };
 		EC2A0FEA2558A54A005069FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		EC2A0FFF2558A54A005069FA /* 1 Rep MaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1 Rep MaxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2A10032558A54A005069FA /* _RMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _RMUITests.swift; sourceTree = "<group>"; };
 		EC2A10052558A54A005069FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 			children = (
 				EC2A0FDE2558A549005069FA /* AppDelegate.swift */,
 				EC2A0FE02558A549005069FA /* SceneDelegate.swift */,
-				EC2A0FE22558A549005069FA /* ViewController.swift */,
-				EC2A0FE42558A549005069FA /* Main.storyboard */,
+				ECBD5E03256CAB020073C152 /* Models */,
+				EC7AABA6256C9D8D004F7EDB /* Views */,
 				EC2A0FEA2558A54A005069FA /* Assets.xcassets */,
 				EC2A0FEC2558A54A005069FA /* LaunchScreen.storyboard */,
 				EC2A0FEF2558A54A005069FA /* Info.plist */,
@@ -129,6 +131,31 @@
 				EC2A10052558A54A005069FA /* Info.plist */,
 			);
 			path = "1 Rep Max UITests";
+			sourceTree = "<group>";
+		};
+		EC7AABA6256C9D8D004F7EDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2A0FE42558A549005069FA /* Main.storyboard */,
+				ECBD5E04256CAB360073C152 /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECBD5E03256CAB020073C152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECBD5E04256CAB360073C152 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC2A0FE22558A549005069FA /* CalculateViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2A0FE32558A549005069FA /* ViewController.swift in Sources */,
+				EC2A0FE32558A549005069FA /* CalculateViewController.swift in Sources */,
+				ECBD5E11256CAB9C0073C152 /* MaxCalculator.swift in Sources */,
 				EC2A0FDF2558A549005069FA /* AppDelegate.swift in Sources */,
 				EC2A0FE92558A549005069FA /* _RM.xcdatamodeld in Sources */,
 				EC2A0FE12558A549005069FA /* SceneDelegate.swift in Sources */,
