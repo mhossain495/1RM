@@ -17,6 +17,7 @@
 		EC2A0FF92558A54A005069FA /* _RMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FF82558A54A005069FA /* _RMTests.swift */; };
 		EC2A10042558A54A005069FA /* _RMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A10032558A54A005069FA /* _RMUITests.swift */; };
 		ECBD5E11256CAB9C0073C152 /* MaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */; };
+		ECD8A6FF256DFC9E0059384C /* UITextField_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8A6FE256DFC9E0059384C /* UITextField_Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EC2A10032558A54A005069FA /* _RMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _RMUITests.swift; sourceTree = "<group>"; };
 		EC2A10052558A54A005069FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxCalculator.swift; sourceTree = "<group>"; };
+		ECD8A6FE256DFC9E0059384C /* UITextField_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField_Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2A0FE42558A549005069FA /* Main.storyboard */,
+				ECD8A6FE256DFC9E0059384C /* UITextField_Extensions.swift */,
 				ECBD5E04256CAB360073C152 /* Controllers */,
 			);
 			path = Views;
@@ -291,6 +294,7 @@
 				EC2A0FE32558A549005069FA /* CalculateViewController.swift in Sources */,
 				ECBD5E11256CAB9C0073C152 /* MaxCalculator.swift in Sources */,
 				EC2A0FDF2558A549005069FA /* AppDelegate.swift in Sources */,
+				ECD8A6FF256DFC9E0059384C /* UITextField_Extensions.swift in Sources */,
 				EC2A0FE92558A549005069FA /* _RM.xcdatamodeld in Sources */,
 				EC2A0FE12558A549005069FA /* SceneDelegate.swift in Sources */,
 			);

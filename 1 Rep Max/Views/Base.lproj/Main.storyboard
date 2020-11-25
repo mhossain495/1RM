@@ -31,8 +31,11 @@
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Weight" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="AGk-Cj-2ml">
                                                         <rect key="frame" x="128.33333333333334" y="0.0" width="118.33333333333334" height="86"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FXx-TT-cbH">
                                                         <rect key="frame" x="256.66666666666669" y="1" width="118.33333333333331" height="84.666666666666671"/>
@@ -48,8 +51,11 @@
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Reps" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Os-QeT">
                                                         <rect key="frame" x="128.33333333333334" y="0.0" width="118.33333333333334" height="85.666666666666671"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AUx-DC-NJW">
                                                         <rect key="frame" x="256.66666666666669" y="1" width="118.33333333333331" height="84.333333333333343"/>
