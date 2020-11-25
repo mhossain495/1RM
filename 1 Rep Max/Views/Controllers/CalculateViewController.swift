@@ -12,6 +12,8 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        weightTextField.delegate = self
+        repsTextField.delegate = self
     }
 
  
@@ -20,11 +22,24 @@ class CalculateViewController: UIViewController {
 
     @IBOutlet weak var repsTextField: UITextField!
     
+
     
     
     
 }
 
 
+//MARK: - UITextFieldDelegate
 
+extension CalculateViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(weightTextField.text ?? "")
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        print(repsTextField.text ?? "")
+    }
 
+ 
+}
