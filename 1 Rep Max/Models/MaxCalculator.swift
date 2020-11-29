@@ -10,15 +10,15 @@ import Foundation
 struct MaxCalculator {
     
     // Brzycki formula to calculate one rep max
-    mutating func calculateMax(weight:Int, reps: Int) -> Double {
+    mutating func calculateMax(weight: Float, reps: Float) -> Float? {
     
-        return Double(weight * (36/(37 - reps)))
+        if let maxValue = Float?(weight * (36/(37 - reps))) {
+            return maxValue
+        } else {
+            return 0.0
+        }
         
     }
-    
-   
-    
-    
     
     
 }
