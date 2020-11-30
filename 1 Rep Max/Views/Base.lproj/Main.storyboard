@@ -228,6 +228,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="oneRepMax" destination="wU2-3x-fvn" id="UZ4-L8-a2Z"/>
                         <outlet property="repsTextField" destination="liF-Os-QeT" id="Qtg-UU-YCi"/>
                         <outlet property="weightTextField" destination="AGk-Cj-2ml" id="lTn-a3-mmD"/>
                     </connections>
