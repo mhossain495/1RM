@@ -23,9 +23,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var oneRepMax: UILabel!
     
-    
-    
-    
+
 }
 
 //MARK: - UITextFieldDelegate
@@ -33,10 +31,11 @@ class CalculateViewController: UIViewController {
 extension CalculateViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let weightValue = Float(weightTextField.text ?? String(0))
-        let repsValue = Float(repsTextField.text ?? String(0))
+        // If weight and reps textfield are not nil convert the values to Float else use default value of 0
+        let weightValue = Float(weightTextField.text!) ?? Float(0)
+        let repsValue = Float(repsTextField.text!) ?? Float(0)
       
-        let max = maxCalculator.calculateMax(weight: weightValue!, reps: repsValue!)
+        let max = maxCalculator.calculateMax(weight: weightValue, reps: repsValue)
         oneRepMax.text = String(max)
 
     }
