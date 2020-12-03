@@ -49,7 +49,33 @@ extension CalculateViewController: UITextFieldDelegate {
       
         // Calculate one rep max with values obtained from weight and reps text fields
         let max = maxCalculator.calculateMax(weight: weightValue, reps: repsValue)
-        oneRepMax.text = String(max)
+        oneRepMax.text = String(format: "%.0f", max)
+        
+        
+        // Calculate max weight for various reps with values obtained from weight and reps text fields
+        let twoRM = maxCalculator.calculateMax(weight: weightValue, reps: 2)
+        twoRMLabel.text = String(format: "%.0f", twoRM)
+        
+        let threeRM = maxCalculator.calculateMax(weight: weightValue, reps: 3)
+        threeRMLabel.text = String(format: "%.0f", threeRM)
+        
+        let fourRM = maxCalculator.calculateMax(weight: weightValue, reps: 4)
+        fourRMLabel.text = String(format: "%.0f", fourRM)
+        
+        let fiveRM = maxCalculator.calculateMax(weight: weightValue, reps: 5)
+        fiveRMLabel.text = String(format: "%.0f", fiveRM)
+        
+        let sixRM = maxCalculator.calculateMax(weight: weightValue, reps: 6)
+        sixRMLabel.text = String(format: "%.0f", sixRM)
+        
+        let eightRM = maxCalculator.calculateMax(weight: weightValue, reps: 8)
+        eightRMLabel.text = String(format: "%.0f", eightRM)
+        
+        let tenRM = maxCalculator.calculateMax(weight: weightValue, reps: 10)
+        tenRMLabel.text = String(format: "%.0f", tenRM)
+        
+        let twelveRM = maxCalculator.calculateMax(weight: weightValue, reps: 12)
+        twelveRMLabel.text = String(format: "%.0f", twelveRM)
 
     }
  
