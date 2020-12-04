@@ -37,12 +37,18 @@ class CalculateViewController: UIViewController {
     
 }
 
+
+
+
 //MARK: - UITextFieldDelegate
 
 extension CalculateViewController: UITextFieldDelegate {
 
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
        
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        
         // If weight and reps textfield are not nil, convert the values to Float or else use default value of 0
         let weightValue = Float(weightTextField.text!) ?? Float(0)
         let repsValue = Float(repsTextField.text!) ?? Float(0)
@@ -76,7 +82,8 @@ extension CalculateViewController: UITextFieldDelegate {
         
         let twelveRM = maxCalculator.calculateMax(weight: weightValue, reps: 12)
         twelveRMLabel.text = String(format: "%.0f", twelveRM)
-
+        
+        
     }
  
 }
