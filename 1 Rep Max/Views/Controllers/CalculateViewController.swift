@@ -44,6 +44,7 @@ class CalculateViewController: UIViewController {
 
 extension CalculateViewController: UITextFieldDelegate {
     
+    // textFieldDidEndEditing function will run code and display results after dismissing number pad
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         // If weight and reps textfield are not nil, convert the values to Float or else use default value of 0
@@ -56,32 +57,30 @@ extension CalculateViewController: UITextFieldDelegate {
         
 
         // Calculate max weight for various reps with values obtained from weight and reps text fields
-        let twoRM = maxCalculator.calculateMax(weight: weightValue, reps: 2)
+        let twoRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 2)
         twoRMLabel.text = String(format: "%.0f", twoRM)
         
-        let threeRM = maxCalculator.calculateMax(weight: weightValue, reps: 3)
+        let threeRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 3)
         threeRMLabel.text = String(format: "%.0f", threeRM)
         
-        let fourRM = maxCalculator.calculateMax(weight: weightValue, reps: 4)
+        let fourRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 4)
         fourRMLabel.text = String(format: "%.0f", fourRM)
         
-        let fiveRM = maxCalculator.calculateMax(weight: weightValue, reps: 5)
+        let fiveRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 5)
         fiveRMLabel.text = String(format: "%.0f", fiveRM)
         
-        let sixRM = maxCalculator.calculateMax(weight: weightValue, reps: 6)
+        let sixRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 6)
         sixRMLabel.text = String(format: "%.0f", sixRM)
         
-        let eightRM = maxCalculator.calculateMax(weight: weightValue, reps: 8)
+        let eightRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 8)
         eightRMLabel.text = String(format: "%.0f", eightRM)
         
-        let tenRM = maxCalculator.calculateMax(weight: weightValue, reps: 10)
+        let tenRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 10)
         tenRMLabel.text = String(format: "%.0f", tenRM)
         
-        let twelveRM = maxCalculator.calculateMax(weight: weightValue, reps: 12)
+        let twelveRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 12)
         twelveRMLabel.text = String(format: "%.0f", twelveRM)
-        
-        
-        
+
     }
  
 }

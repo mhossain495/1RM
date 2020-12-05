@@ -52,7 +52,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Reps" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Os-QeT">
                                                         <rect key="frame" x="128.33333333333334" y="0.0" width="118.33333333333334" height="85.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
