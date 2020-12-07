@@ -16,9 +16,39 @@ class CalculateViewController: UIViewController {
         // Do any additional setup after loading the view.
         weightTextField.delegate = self
         repsTextField.delegate = self
+        
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
+        
+        //let textTapGesture = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
+        
+        // add tap gesture to image
+        weightPlusButton.addGestureRecognizer(tapGesture)
+        
+        // enable user interaction
+        weightPlusButton.isUserInteractionEnabled = true
+        
     }
 
- 
+    
+    
+    @objc func imageTapped(gesture: UITapGestureRecognizer) {
+    
+        if let tappedImage = gesture.view as? UIImageView {
+            /*
+            if tappedImage == weightPlusButton {
+                
+            }
+            */
+            tappedImage.alpha = 0.5
+            UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {tappedImage.alpha = 1}, completion: nil)
+            
+            }
+            
+        }
+    
+    
+    
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var oneRepMax: UILabel!
@@ -35,6 +65,14 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var tenRMLabel: UILabel!
     @IBOutlet weak var twelveRMLabel: UILabel!
     
+    @IBOutlet weak var weightPlusButton: UIImageView!
+    
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -50,12 +88,12 @@ extension CalculateViewController: UITextFieldDelegate {
         // If weight and reps textfield are not nil, convert the values to Float or else use default value of 0
         let weightValue = Float(weightTextField.text!) ?? Float(0)
         let repsValue = Float(repsTextField.text!) ?? Float(0)
-      
+        
         // Calculate one rep max with values obtained from weight and reps text fields
         let max = maxCalculator.calculateMax(weight: weightValue, reps: repsValue)
         oneRepMax.text = String(format: "%.0f", max)
         
-
+        
         // Calculate max weight for various reps with values obtained from weight and reps text fields
         let twoRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 2)
         twoRMLabel.text = String(format: "%.0f", twoRM)
@@ -80,7 +118,7 @@ extension CalculateViewController: UITextFieldDelegate {
         
         let twelveRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 12)
         twelveRMLabel.text = String(format: "%.0f", twelveRM)
-
+        
     }
- 
+    
 }
