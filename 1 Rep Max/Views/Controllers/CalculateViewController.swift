@@ -33,19 +33,22 @@ class CalculateViewController: UIViewController {
     
     
     @objc func imageTapped(gesture: UITapGestureRecognizer) {
-    
+        
         if let tappedImage = gesture.view as? UIImageView {
-            /*
-            if tappedImage == weightPlusButton {
-                
+            
+            // Add 1 if tapped image is weight pluss button
+            if tappedImage.image == weightPlusButton.image {
+               var weightValue = Float(weightTextField.text!) ?? Float(0)
+                weightValue += 1
+                weightTextField.text = String(format: "%.0f", weightValue)
             }
-            */
+            
+            // Animate tapped button with a flash
             tappedImage.alpha = 0.5
-            UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {tappedImage.alpha = 1}, completion: nil)
-            
-            }
-            
+            UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {tappedImage.alpha = 1}, completion: nil)
         }
+        
+    }
     
     
     
