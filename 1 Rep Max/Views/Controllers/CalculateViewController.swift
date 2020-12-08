@@ -18,15 +18,13 @@ class CalculateViewController: UIViewController {
         repsTextField.delegate = self
         
         // create tap gesture recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
-        // Add tap gesture to image
-        weightPlusButton.addGestureRecognizer(tapGesture)
-        weightMinusButton.addGestureRecognizer(tapGesture)
-        repsPlusButton.addGestureRecognizer(tapGesture)
-        repsMinusButton.addGestureRecognizer(tapGesture)
+        let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
+        let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
         // Enable user interaction
         weightPlusButton.isUserInteractionEnabled = true
@@ -34,6 +32,11 @@ class CalculateViewController: UIViewController {
         repsPlusButton.isUserInteractionEnabled = true
         repsMinusButton.isUserInteractionEnabled = true
         
+        // Add tap gesture to image
+        weightPlusButton.addGestureRecognizer(tapGesture1)
+        weightMinusButton.addGestureRecognizer(tapGesture2)
+        repsPlusButton.addGestureRecognizer(tapGesture3)
+        repsMinusButton.addGestureRecognizer(tapGesture4)
         
     }
 
