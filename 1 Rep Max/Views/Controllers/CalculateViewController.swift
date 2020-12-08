@@ -20,13 +20,20 @@ class CalculateViewController: UIViewController {
         // create tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
-        //let textTapGesture = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
-        // add tap gesture to image
+        // Add tap gesture to image
         weightPlusButton.addGestureRecognizer(tapGesture)
+        weightMinusButton.addGestureRecognizer(tapGesture)
+        repsPlusButton.addGestureRecognizer(tapGesture)
+        repsMinusButton.addGestureRecognizer(tapGesture)
         
-        // enable user interaction
+        
+        // Enable user interaction
         weightPlusButton.isUserInteractionEnabled = true
+        weightMinusButton.isUserInteractionEnabled = true
+        repsPlusButton.isUserInteractionEnabled = true
+        repsMinusButton.isUserInteractionEnabled = true
+        
         
     }
 
@@ -70,9 +77,12 @@ class CalculateViewController: UIViewController {
     
     @IBOutlet weak var weightPlusButton: UIImageView!
     
+    @IBOutlet weak var weightMinusButton: UIImageView!
     
     
+    @IBOutlet weak var repsPlusButton: UIImageView!
     
+    @IBOutlet weak var repsMinusButton: UIImageView!
     
     
     
