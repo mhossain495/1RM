@@ -13,11 +13,12 @@ class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         weightTextField.delegate = self
         repsTextField.delegate = self
         
-        // create tap gesture recognizer
+        // Create tap gesture recognizer for each image
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
         
         let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(CalculateViewController.imageTapped(gesture:)))
@@ -32,7 +33,7 @@ class CalculateViewController: UIViewController {
         repsPlusButton.isUserInteractionEnabled = true
         repsMinusButton.isUserInteractionEnabled = true
         
-        // Add tap gesture to image
+        // Add tap gesture to each image
         weightPlusButton.addGestureRecognizer(tapGesture1)
         weightMinusButton.addGestureRecognizer(tapGesture2)
         repsPlusButton.addGestureRecognizer(tapGesture3)
@@ -44,13 +45,27 @@ class CalculateViewController: UIViewController {
     
     @objc func imageTapped(gesture: UITapGestureRecognizer) {
         
+        var weightValue = Float(weightTextField.text!) ?? Float(0)
+        var repsValue = Float(repsTextField.text!) ?? Float(0)
+        
         if let tappedImage = gesture.view as? UIImageView {
             
-            // Add 1 if tapped image is weight pluss button
-            if tappedImage.image == weightPlusButton.image {
-               var weightValue = Float(weightTextField.text!) ?? Float(0)
+            // Increment weight or reps text field by 1 based on tapped image
+            switch tappedImage.image {
+            case weightPlusButton.image:
                 weightValue += 1
                 weightTextField.text = String(format: "%.0f", weightValue)
+            case weightMinusButton.image:
+                weightValue -= 1
+                weightTextField.text = String(format: "%.0f", weightValue)
+            case repsPlusButton.image:
+                repsValue += 1
+                repsTextField.text = String(format: "%.0f", repsValue)
+            case repsMinusButton.image:
+                repsValue -= 1
+                repsTextField.text = String(format: "%.0f", repsValue)
+            default:
+                break
             }
             
             // Animate tapped button with a flash
@@ -61,7 +76,7 @@ class CalculateViewController: UIViewController {
     }
     
     
-    
+    // Weight, reps, and one rep max text fields
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var oneRepMax: UILabel!
@@ -78,20 +93,15 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var tenRMLabel: UILabel!
     @IBOutlet weak var twelveRMLabel: UILabel!
     
+    // Weight plus and minus images
     @IBOutlet weak var weightPlusButton: UIImageView!
-    
     @IBOutlet weak var weightMinusButton: UIImageView!
     
-    
+    // Repls plus and minus images
     @IBOutlet weak var repsPlusButton: UIImageView!
-    
     @IBOutlet weak var repsMinusButton: UIImageView!
     
-    
-    
 }
-
-
 
 
 //MARK: - UITextFieldDelegate
