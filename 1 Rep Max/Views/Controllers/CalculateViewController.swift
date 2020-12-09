@@ -51,17 +51,17 @@ class CalculateViewController: UIViewController {
         if let tappedImage = gesture.view as? UIImageView {
             
             // Increment weight or reps text field by 1 based on tapped image
-            switch tappedImage.image {
-            case weightPlusButton.image:
+            switch tappedImage {
+            case weightPlusButton:
                 weightValue += 1
                 weightTextField.text = String(format: "%.0f", weightValue)
-            case weightMinusButton.image:
+            case weightMinusButton:
                 weightValue -= 1
                 weightTextField.text = String(format: "%.0f", weightValue)
-            case repsPlusButton.image:
+            case repsPlusButton:
                 repsValue += 1
                 repsTextField.text = String(format: "%.0f", repsValue)
-            case repsMinusButton.image:
+            case repsMinusButton:
                 repsValue -= 1
                 repsTextField.text = String(format: "%.0f", repsValue)
             default:
