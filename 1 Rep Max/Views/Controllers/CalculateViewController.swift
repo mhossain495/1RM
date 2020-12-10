@@ -103,7 +103,28 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
-    // Function to update labels with max weight values
+    
+}
+
+
+
+//MARK: - UITextFieldDelegate
+
+extension CalculateViewController: UITextFieldDelegate {
+    
+    // textFieldDidEndEditing function will run code and display results after dismissing number pad
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        updateLabelValues()
+        
+        }
+    }
+   
+//MARK: - updateLabelValues()
+
+extension CalculateViewController {
+    
+    // Function to update labels in CalculateViewController with max weight values
     func updateLabelValues() {
         
         // If weight and reps textfield are not nil, convert the values to Float or else use default value of 0
@@ -141,27 +162,8 @@ class CalculateViewController: UIViewController {
         twelveRMLabel.text = String(format: "%.0f", twelveRM)
  
     }
- 
-    
     
 }
-
-
-
-//MARK: - UITextFieldDelegate
-
-extension CalculateViewController: UITextFieldDelegate {
-    
-    // textFieldDidEndEditing function will run code and display results after dismissing number pad
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        self.updateLabelValues()
-        
-        }
-    }
-   
-
-
 
 
 
