@@ -42,7 +42,6 @@ class CalculateViewController: UIViewController {
     }
 
     
-    
     @objc func imageTapped(gesture: UITapGestureRecognizer) {
         
         var weightValue = Float(weightTextField.text!) ?? Float(0)
@@ -71,6 +70,9 @@ class CalculateViewController: UIViewController {
             // Animate tapped button with a flash
             tappedImage.alpha = 0.5
             UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {tappedImage.alpha = 1}, completion: nil)
+            
+            // Call function to recalculate label values after user increments weight or reps by 1
+            self.updateLabelValues()
         }
         
     }
@@ -101,15 +103,8 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
-}
-
-
-//MARK: - UITextFieldDelegate
-
-extension CalculateViewController: UITextFieldDelegate {
-    
-    // textFieldDidEndEditing function will run code and display results after dismissing number pad
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    // Function to update labels with max weight values
+    func updateLabelValues() {
         
         // If weight and reps textfield are not nil, convert the values to Float or else use default value of 0
         let weightValue = Float(weightTextField.text!) ?? Float(0)
@@ -144,7 +139,30 @@ extension CalculateViewController: UITextFieldDelegate {
         
         let twelveRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 12)
         twelveRMLabel.text = String(format: "%.0f", twelveRM)
-        
+ 
     }
+ 
+    
     
 }
+
+
+
+//MARK: - UITextFieldDelegate
+
+extension CalculateViewController: UITextFieldDelegate {
+    
+    // textFieldDidEndEditing function will run code and display results after dismissing number pad
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        self.updateLabelValues()
+        
+        }
+    }
+   
+
+
+
+
+
+
