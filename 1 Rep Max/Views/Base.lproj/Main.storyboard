@@ -322,6 +322,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" image="doc.text" catalog="system" id="VjQ-kV-9Ie"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="BqY-Qd-5Ct" id="fzl-2S-cpA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVQ-Vv-15g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
