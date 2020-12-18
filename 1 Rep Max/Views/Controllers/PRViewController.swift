@@ -49,7 +49,6 @@ extension PRViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
         // Configure cell
-        cell.contentView.backgroundColor = .blue
         return cell
     }
     
