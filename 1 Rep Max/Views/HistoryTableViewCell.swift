@@ -9,6 +9,8 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
 
-    
+    func card(HistoryTableViewCell: UITableViewCell) {
+        HistoryTableViewCell.contentView.layer.cornerRadius = 5
+    }
 
 }

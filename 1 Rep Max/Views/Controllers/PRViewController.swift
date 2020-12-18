@@ -33,19 +33,24 @@ extension PRViewController: UITableViewDelegate {
 
 
 
-
-
 //MARK: - TableView DataSource
 
 extension PRViewController: UITableViewDataSource {
+    
+    // Return the number of rows for table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
+    // Provide a cell for each row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // Obtain custom reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
+        
+        // Configure cell
+        cell.contentView.backgroundColor = .blue
         return cell
     }
-    
     
 }
