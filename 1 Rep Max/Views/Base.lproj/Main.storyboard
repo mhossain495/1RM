@@ -274,6 +274,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4S-K5-awh" userLabel="Inner View">
+                                                    <rect key="frame" x="8" y="8" width="359" height="84"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eFz-Dn-VsH">
                                                     <rect key="frame" x="16.000000000000007" y="9.0000000000000018" width="96.666666666666686" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -305,11 +309,14 @@
                                             <constraints>
                                                 <constraint firstItem="XL9-Td-V0j" firstAttribute="leading" secondItem="eFz-Dn-VsH" secondAttribute="leading" id="0ja-aw-oBW"/>
                                                 <constraint firstItem="eFz-Dn-VsH" firstAttribute="bottom" secondItem="dCy-V4-mOg" secondAttribute="bottom" id="1G7-2E-Kk8"/>
+                                                <constraint firstItem="k4S-K5-awh" firstAttribute="top" secondItem="Bev-sw-uyb" secondAttribute="top" constant="8" id="1i0-zI-vsN"/>
                                                 <constraint firstItem="s15-B5-PZd" firstAttribute="leading" secondItem="dCy-V4-mOg" secondAttribute="leading" id="65W-Bf-XRK"/>
                                                 <constraint firstItem="MK6-TD-qJv" firstAttribute="top" secondItem="s15-B5-PZd" secondAttribute="bottom" id="Adw-nU-Zjl"/>
+                                                <constraint firstAttribute="bottom" secondItem="k4S-K5-awh" secondAttribute="bottom" constant="8" id="FRA-QE-7tZ"/>
                                                 <constraint firstItem="s15-B5-PZd" firstAttribute="trailing" secondItem="MK6-TD-qJv" secondAttribute="trailing" id="LZe-JH-xuQ"/>
                                                 <constraint firstItem="s15-B5-PZd" firstAttribute="leading" secondItem="MK6-TD-qJv" secondAttribute="leading" id="Mbc-Ky-rvE"/>
                                                 <constraint firstAttribute="trailing" secondItem="dCy-V4-mOg" secondAttribute="trailing" constant="16" id="RGy-As-97c"/>
+                                                <constraint firstItem="k4S-K5-awh" firstAttribute="leading" secondItem="Bev-sw-uyb" secondAttribute="leading" constant="8" id="YeH-te-yZf"/>
                                                 <constraint firstItem="dCy-V4-mOg" firstAttribute="top" secondItem="Bev-sw-uyb" secondAttribute="top" constant="9" id="bPk-XX-PMe"/>
                                                 <constraint firstItem="XL9-Td-V0j" firstAttribute="top" secondItem="s15-B5-PZd" secondAttribute="top" constant="-20" id="cjQ-ui-xlf"/>
                                                 <constraint firstItem="XL9-Td-V0j" firstAttribute="bottomMargin" secondItem="MK6-TD-qJv" secondAttribute="bottom" id="dwZ-ks-bGT"/>
@@ -317,10 +324,14 @@
                                                 <constraint firstItem="XL9-Td-V0j" firstAttribute="trailing" secondItem="eFz-Dn-VsH" secondAttribute="trailing" id="jj3-pE-BG1"/>
                                                 <constraint firstItem="s15-B5-PZd" firstAttribute="trailing" secondItem="dCy-V4-mOg" secondAttribute="trailing" id="m9U-d3-Mc2"/>
                                                 <constraint firstAttribute="bottom" secondItem="XL9-Td-V0j" secondAttribute="bottom" constant="9" id="mtq-cZ-XKM"/>
+                                                <constraint firstAttribute="trailing" secondItem="k4S-K5-awh" secondAttribute="trailing" constant="8" id="sV9-Tb-T1j"/>
                                                 <constraint firstItem="eFz-Dn-VsH" firstAttribute="top" secondItem="Bev-sw-uyb" secondAttribute="top" constant="9" id="stx-gd-E8G"/>
                                                 <constraint firstItem="XL9-Td-V0j" firstAttribute="top" secondItem="eFz-Dn-VsH" secondAttribute="firstBaseline" id="xyx-y9-vU4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="innerView" destination="k4S-K5-awh" id="3qe-Ke-9Pz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -9,22 +9,33 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var innerView: UIView!
+    
+    // Function to apply card shape and shadow effect to table view cells
     func cardView(cell: UITableViewCell) {
-        cell.contentView.layer.cornerRadius = 20
-        cell.contentView.layer.masksToBounds = true
 
+        // Provide value for roundness effect of cell and shadow
+        let cornerRadiusValue: CGFloat = 10
         
-        cell.contentView.layer.borderWidth = 0.5
+        // Cell roundness and shadow
+        innerView.layer.cornerRadius = cornerRadiusValue
+        innerView.layer.masksToBounds = false // Makes shadow visible when set to false
+    
+        // Cell shadow properties
+        innerView.layer.shadowColor = UIColor.gray.cgColor // Sets color of shadow
+        innerView.layer.shadowOffset = CGSize(width: 0, height: 0) // Sets distance of shadow from view to give 3D effect
+        innerView.layer.shadowOpacity = 1 // Sets strength of shadow
+        innerView.layer.shadowRadius = 3 // Sets width of shadow
         
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        cell.layer.shadowRadius = 12
-        cell.layer.shadowOpacity = 0.7
-        cell.layer.masksToBounds = false
-  
+        // Cell border properties
+        innerView.layer.borderWidth = 2 // Sets cell border thickness
+        innerView.layer.borderColor = UIColor(named: "Custom Color 4")?.cgColor // Sets cell border color to xcasset color
+        
+        // Sets shadowPath to specific value to improve performance when scrolling
+        let shadowPath = UIBezierPath(roundedRect: innerView.bounds, cornerRadius: cornerRadiusValue)
+        innerView.layer.shadowPath = shadowPath.cgPath
+        innerView.layer.shouldRasterize = true
+        innerView.layer.rasterizationScale = UIScreen.main.scale
     }
-
-    
-    
-    
+        
 }

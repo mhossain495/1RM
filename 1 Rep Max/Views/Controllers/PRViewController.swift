@@ -36,7 +36,7 @@ extension PRViewController: UITableViewDataSource {
     
     // Return the number of rows for table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 50
     }
     
     // Provide a cell for each row
@@ -45,7 +45,7 @@ extension PRViewController: UITableViewDataSource {
         // Obtain custom reusable cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
-        // Configure cell
+        // Configure cell with card shape and shadow effect
         cell.cardView(cell: cell)
         
         return cell
