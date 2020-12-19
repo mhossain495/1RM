@@ -20,15 +20,12 @@ class PRViewController: UIViewController {
         historyTableView.dataSource = self
         
     }
-    
-    
-    
-    
+
 }
 //MARK: - TableView Delegate
 
 extension PRViewController: UITableViewDelegate {
-    
+
 }
 
 
@@ -49,6 +46,8 @@ extension PRViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
         // Configure cell
+        cell.cardView(cell: cell)
+        
         return cell
     }
     
