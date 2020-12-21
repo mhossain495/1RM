@@ -22,7 +22,6 @@ struct MaxCalculator {
         
         return oneRepMax*(37-reps) / 36
         
-        
     }
     
 
