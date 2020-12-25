@@ -103,8 +103,15 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
+    @IBAction func excerciseButton(_ sender: Any) {
+        
+        
+        performSegue(withIdentifier: "goToExerciseTable", sender: sender)
+    }
     
 }
+
+
 
 
 
