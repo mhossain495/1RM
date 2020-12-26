@@ -9,6 +9,8 @@ import UIKit
 
 class ExcerciseTableViewController: UITableViewController {
 
+    let exerciseArray = ExerciseList().exerciseArray
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,21 +20,27 @@ class ExcerciseTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    var exerciseList = [ExerciseList]()
     
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+   
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return exerciseList.count
+
+        return exerciseArray.count
+        
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let exerciseCell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath)
+        exerciseCell.textLabel?.text = exerciseArray[indexPath.row]
+        return exerciseCell
+    }
+    
 
 
     /*

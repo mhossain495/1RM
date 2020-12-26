@@ -105,14 +105,10 @@ class CalculateViewController: UIViewController {
     
     @IBAction func excerciseButton(_ sender: Any) {
         
-        
         performSegue(withIdentifier: "goToExerciseTable", sender: sender)
     }
     
 }
-
-
-
 
 
 //MARK: - UITextFieldDelegate
@@ -171,7 +167,3 @@ extension CalculateViewController {
     }
     
 }
-
-
-
-

@@ -8,5 +8,7 @@
 import Foundation
 
 struct ExerciseList {
+    
     let exerciseArray = ["Bench Press", "Deadlift", "Squat"]
+    
 }
