@@ -23,25 +23,40 @@ class ExcerciseTableViewController: UITableViewController {
     
 
     // MARK: - Table view data source
-
+    
+    // Return number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
-   
         return 1
     }
-
+    
+    // Return number of rows based on array size
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return exerciseArray.count
-        
     }
     
+    // Add cell animations when row is selected
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Remove gray background color when user taps cell
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Add or remove checkmark when user selects cell
+        if let exerciseCell = tableView.cellForRow(at: indexPath) {
+            if exerciseCell.accessoryType == .checkmark {
+                exerciseCell.accessoryType = .none
+            } else {
+                exerciseCell.accessoryType = .checkmark
+            }
+        }
+    }
+    
+    // Populate tableView cells with array data
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let exerciseCell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath)
         exerciseCell.textLabel?.text = exerciseArray[indexPath.row]
         return exerciseCell
     }
     
-
 
     /*
     // Override to support editing the table view.
