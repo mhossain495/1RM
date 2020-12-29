@@ -19,6 +19,7 @@ class ExcerciseTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
     
 
@@ -34,21 +35,42 @@ class ExcerciseTableViewController: UITableViewController {
         return exerciseArray.count
     }
     
+    // Variable to save currently selected index path
+    var selectedIndexPath: NSIndexPath? = NSIndexPath(row: 0, section: 0)
+    
     // Add cell animations when row is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // Remove gray background color when user taps cell
+        // Remove gray background color that remains after user taps cell
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Add or remove checkmark when user selects cell
-        if let exerciseCell = tableView.cellForRow(at: indexPath) {
-            if exerciseCell.accessoryType == .checkmark {
-                exerciseCell.accessoryType = .none
-            } else {
-                exerciseCell.accessoryType = .checkmark
-            }
+        // Do nothing if same row is selected again
+        if indexPath == selectedIndexPath! as IndexPath {
+            return
         }
+        
+        
+        // Toggle checkmark on old cell off and on for new cell
+        let newCell = tableView.cellForRow(at: indexPath)
+        if newCell?.accessoryType == UITableViewCell.AccessoryType.none {
+            newCell?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }
+        
+        let oldCell = tableView.cellForRow(at: selectedIndexPath! as IndexPath)
+        if oldCell?.accessoryType == UITableViewCell.AccessoryType.checkmark {
+            oldCell?.accessoryType = UITableViewCell.AccessoryType.none
+        }
+        // Save selected index path
+        selectedIndexPath = indexPath as NSIndexPath
+        
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .none
+    }
+
+    
     
     // Populate tableView cells with array data
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

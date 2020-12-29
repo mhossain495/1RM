@@ -37,5 +37,5 @@ class HistoryTableViewCell: UITableViewCell {
         innerView.layer.shouldRasterize = true
         innerView.layer.rasterizationScale = UIScreen.main.scale
     }
-        
+
 }
