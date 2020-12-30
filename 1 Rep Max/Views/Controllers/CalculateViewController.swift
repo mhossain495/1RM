@@ -103,10 +103,16 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
+    // Segue to ExerciseTableViewController
     @IBAction func excerciseButton(_ sender: Any) {
         
-        performSegue(withIdentifier: "goToExerciseTable", sender: sender)
+        performSegue(withIdentifier: "goToExerciseTable", sender: self)
     }
+    
+    @IBAction func unwindToCalculateVC(segue: UIStoryboardSegue) {
+        
+    }
+    
     
 }
 

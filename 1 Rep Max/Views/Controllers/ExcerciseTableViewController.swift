@@ -63,13 +63,10 @@ class ExcerciseTableViewController: UITableViewController {
         // Save selected index path
         selectedIndexPath = indexPath as NSIndexPath
         
+        performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
+        
     }
     
-    
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .none
-    }
-
     
     
     // Populate tableView cells with array data

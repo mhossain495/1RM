@@ -293,8 +293,12 @@
                             <outlet property="delegate" destination="NCA-Cp-H8q" id="Ewf-wN-tIc"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="7J8-mC-o9g" kind="unwind" identifier="unwindToCalculateVC" unwindAction="unwindToCalculateVCWithSegue:" id="RDD-UM-Jl1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZm-9a-c7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7J8-mC-o9g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1201" y="1567"/>
         </scene>
