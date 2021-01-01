@@ -73,6 +73,14 @@ class ExcerciseTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let exerciseCell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath)
         exerciseCell.textLabel?.text = exerciseArray[indexPath.row]
+        
+        // Set the checkmark to currently selected indexPath
+        if indexPath == selectedIndexPath! as IndexPath {
+            exerciseCell.accessoryType = UITableViewCell.AccessoryType.checkmark
+        } else {
+            exerciseCell.accessoryType = UITableViewCell.AccessoryType.none
+        }
+        
         return exerciseCell
     }
     
