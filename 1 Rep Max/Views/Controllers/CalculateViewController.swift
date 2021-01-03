@@ -40,8 +40,7 @@ class CalculateViewController: UIViewController {
         weightMinusButton.addGestureRecognizer(tapGesture2)
         repsPlusButton.addGestureRecognizer(tapGesture3)
         repsMinusButton.addGestureRecognizer(tapGesture4)
-        
-        
+    
     }
 
     
@@ -106,10 +105,11 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
+    @IBOutlet weak var exerciseButton: UIButton!
+    
     // Segue to ExerciseTableViewController
     @IBAction func excerciseButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToExerciseTable", sender: self)
-        
     }
     
     // Unwind segue to dismiss ExerciseTableViewController
@@ -117,7 +117,7 @@ class CalculateViewController: UIViewController {
         exerciseButton.setTitle(selectedExercise, for: .normal)
     }
     
-    @IBOutlet weak var exerciseButton: UIButton!
+ 
 
 }
 
@@ -128,7 +128,7 @@ extension CalculateViewController: UITextFieldDelegate {
     
     // textFieldDidEndEditing function will run code and display results after dismissing number pad
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+
         updateLabelValues()
         
         }

@@ -45,9 +45,9 @@ class ExcerciseTableViewController: UITableViewController {
         // Remove gray background color that remains after user taps cell
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Do nothing if same row is selected again
+        // Peform unwind segue and pass value to exercise button in CalculateVC if same row selected
         if indexPath == selectedIndexPath! as IndexPath {
-            return
+            performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
         }
         
         
@@ -65,8 +65,7 @@ class ExcerciseTableViewController: UITableViewController {
         selectedIndexPath = indexPath as NSIndexPath
         
        performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
-        
-        //self.dismiss(animated: true, completion: nil)
+
     }
     
     
