@@ -37,7 +37,7 @@ class ExcerciseTableViewController: UITableViewController {
     }
     
     // Variable to save currently selected index path
-    var selectedIndexPath: NSIndexPath? = NSIndexPath(row: 0, section: 0)
+    var selectedIndexPath: IndexPath? = IndexPath(row: 0, section: 0)
     
     // Add cell animations when row is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -46,7 +46,7 @@ class ExcerciseTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // Peform unwind segue and pass value to exercise button in CalculateVC if same row selected
-        if indexPath == selectedIndexPath! as IndexPath {
+        if indexPath == selectedIndexPath {
             performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
         }
         
@@ -57,12 +57,12 @@ class ExcerciseTableViewController: UITableViewController {
             newCell?.accessoryType = UITableViewCell.AccessoryType.checkmark
         }
         
-        let oldCell = tableView.cellForRow(at: selectedIndexPath! as IndexPath)
+        let oldCell = tableView.cellForRow(at: selectedIndexPath!)
         if oldCell?.accessoryType == UITableViewCell.AccessoryType.checkmark {
             oldCell?.accessoryType = UITableViewCell.AccessoryType.none
         }
         // Save selected index path
-        selectedIndexPath = indexPath as NSIndexPath
+        selectedIndexPath = indexPath
         
        performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
 
@@ -76,12 +76,12 @@ class ExcerciseTableViewController: UITableViewController {
         exerciseCell.textLabel?.text = exerciseArray[indexPath.row]
         
         // Set the checkmark to currently selected indexPath
-        if indexPath == selectedIndexPath! as IndexPath {
+        if indexPath == selectedIndexPath {
             exerciseCell.accessoryType = UITableViewCell.AccessoryType.checkmark
         } else {
             exerciseCell.accessoryType = UITableViewCell.AccessoryType.none
         }
-        
+
         return exerciseCell
     }
     
@@ -90,10 +90,9 @@ class ExcerciseTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let CalculateVC = segue.destination as? CalculateViewController {
-            let selectedExercise = self.tableView.cellForRow(at: selectedIndexPath! as IndexPath)?.textLabel?.text
+            let selectedExercise = self.tableView.cellForRow(at: selectedIndexPath!)?.textLabel?.text
             CalculateVC.selectedExercise = selectedExercise
         }
-        
     }
     
     
