@@ -20,6 +20,7 @@ class ExcerciseTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        
     }
     
 
@@ -63,8 +64,9 @@ class ExcerciseTableViewController: UITableViewController {
         // Save selected index path
         selectedIndexPath = indexPath as NSIndexPath
         
-        performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
+       performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
         
+        //self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -83,6 +85,18 @@ class ExcerciseTableViewController: UITableViewController {
         
         return exerciseCell
     }
+    
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let CalculateVC = segue.destination as? CalculateViewController {
+            let selectedExercise = self.tableView.cellForRow(at: selectedIndexPath! as IndexPath)?.textLabel?.text
+            CalculateVC.selectedExercise = selectedExercise
+        }
+        
+    }
+    
     
 
     /*

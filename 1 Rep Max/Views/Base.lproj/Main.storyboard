@@ -249,6 +249,7 @@
                     <tabBarItem key="tabBarItem" title="Max Calculator" image="Calculator" id="Hdk-qW-i11"/>
                     <connections>
                         <outlet property="eightRMLabel" destination="2sS-WN-dAC" id="VfA-Hs-MW9"/>
+                        <outlet property="exerciseButton" destination="q6v-Af-7IJ" id="aSm-kI-bdL"/>
                         <outlet property="fiveRMLabel" destination="j9x-5J-hit" id="J5P-sv-wZH"/>
                         <outlet property="fourRMLabel" destination="1E1-YQ-G3I" id="bXq-Iz-Zvh"/>
                         <outlet property="oneRepMax" destination="wU2-3x-fvn" id="UZ4-L8-a2Z"/>
@@ -294,7 +295,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="7J8-mC-o9g" kind="unwind" identifier="unwindToCalculateVC" unwindAction="unwindToCalculateVCWithSegue:" id="RDD-UM-Jl1"/>
+                        <segue destination="7J8-mC-o9g" kind="unwind" identifier="unwindToCalculateVC" unwindAction="unwindToCalculateVCWithUnwindSegue:" id="Hbd-1j-nkl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZm-9a-c7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

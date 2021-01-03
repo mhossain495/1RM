@@ -10,6 +10,8 @@ import UIKit
 class CalculateViewController: UIViewController {
 
     var maxCalculator = MaxCalculator()
+    var selectedExercise: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class CalculateViewController: UIViewController {
         weightMinusButton.addGestureRecognizer(tapGesture2)
         repsPlusButton.addGestureRecognizer(tapGesture3)
         repsMinusButton.addGestureRecognizer(tapGesture4)
+        
         
     }
 
@@ -104,16 +107,18 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var repsMinusButton: UIImageView!
     
     // Segue to ExerciseTableViewController
-    @IBAction func excerciseButton(_ sender: Any) {
-        
+    @IBAction func excerciseButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToExerciseTable", sender: self)
-    }
-    
-    @IBAction func unwindToCalculateVC(segue: UIStoryboardSegue) {
         
     }
     
+    // Unwind segue to dismiss ExerciseTableViewController
+    @IBAction func unwindToCalculateVC(unwindSegue: UIStoryboardSegue) {
+        exerciseButton.setTitle(selectedExercise, for: .normal)
+    }
     
+    @IBOutlet weak var exerciseButton: UIButton!
+
 }
 
 
