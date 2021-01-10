@@ -11,7 +11,7 @@
 		EC2A0FE12558A549005069FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE02558A549005069FA /* SceneDelegate.swift */; };
 		EC2A0FE32558A549005069FA /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE22558A549005069FA /* CalculateViewController.swift */; };
 		EC2A0FE62558A549005069FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FE42558A549005069FA /* Main.storyboard */; };
-		EC2A0FE92558A549005069FA /* _RM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE72558A549005069FA /* _RM.xcdatamodeld */; };
+		EC2A0FE92558A549005069FA /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FE72558A549005069FA /* DataModel.xcdatamodeld */; };
 		EC2A0FEB2558A54A005069FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FEA2558A54A005069FA /* Assets.xcassets */; };
 		EC2A0FEE2558A54A005069FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2A0FEC2558A54A005069FA /* LaunchScreen.storyboard */; };
 		EC2A0FF92558A54A005069FA /* _RMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A0FF82558A54A005069FA /* _RMTests.swift */; };
@@ -120,7 +120,7 @@
 				EC2A0FEA2558A54A005069FA /* Assets.xcassets */,
 				EC2A0FEC2558A54A005069FA /* LaunchScreen.storyboard */,
 				EC2A0FEF2558A54A005069FA /* Info.plist */,
-				EC2A0FE72558A549005069FA /* _RM.xcdatamodeld */,
+				EC2A0FE72558A549005069FA /* DataModel.xcdatamodeld */,
 			);
 			path = "1 Rep Max";
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 				ECFD23C025966A0D004EC69A /* ExcerciseTableViewController.swift in Sources */,
 				EC2A0FDF2558A549005069FA /* AppDelegate.swift in Sources */,
 				ECD8A6FF256DFC9E0059384C /* UITextField_Extensions.swift in Sources */,
-				EC2A0FE92558A549005069FA /* _RM.xcdatamodeld in Sources */,
+				EC2A0FE92558A549005069FA /* DataModel.xcdatamodeld in Sources */,
 				EC2A0FE12558A549005069FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,13 +647,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EC2A0FE72558A549005069FA /* _RM.xcdatamodeld */ = {
+		EC2A0FE72558A549005069FA /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				EC2A0FE82558A549005069FA /* _RM.xcdatamodel */,
 			);
 			currentVersion = EC2A0FE82558A549005069FA /* _RM.xcdatamodel */;
-			path = _RM.xcdatamodeld;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
