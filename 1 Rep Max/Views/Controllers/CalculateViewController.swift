@@ -13,6 +13,7 @@ class CalculateViewController: UIViewController {
     var selectedExercise: String?
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
