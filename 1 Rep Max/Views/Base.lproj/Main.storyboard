@@ -378,6 +378,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="dCy-V4-mOg" id="4AE-9t-F9b"/>
+                                            <outlet property="exerciseImage" destination="XL9-Td-V0j" id="PIp-wn-gxV"/>
+                                            <outlet property="exerciseLabel" destination="eFz-Dn-VsH" id="nhi-il-Yfm"/>
+                                            <outlet property="historicMaxLabel" destination="MK6-TD-qJv" id="7tH-xe-SCJ"/>
                                             <outlet property="innerView" destination="k4S-K5-awh" id="3qe-Ke-9Pz"/>
                                         </connections>
                                     </tableViewCell>

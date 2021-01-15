@@ -11,6 +11,12 @@ class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var innerView: UIView!
     
+    // Labels for reusable cells
+    @IBOutlet weak var historicMaxLabel: UILabel!
+    @IBOutlet weak var exerciseLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var exerciseImage: UIImageView!
+    
     // Function to apply card shape and shadow effect to table view cells
     func cardView(cell: UITableViewCell) {
 
