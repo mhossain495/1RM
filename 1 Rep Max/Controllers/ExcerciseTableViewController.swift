@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ExcerciseTableViewController: UITableViewController {
 
     let exerciseArray = ExerciseList().exerciseArray
+   
     
     // Access to context of persistent container to allow app to interact with database
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

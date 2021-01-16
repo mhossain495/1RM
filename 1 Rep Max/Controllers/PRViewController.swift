@@ -12,6 +12,8 @@ class PRViewController: UIViewController {
     
     @IBOutlet weak var historyTableView: UITableView!
     
+    var historicalDataArray = [HistoricalEntity]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -117,6 +117,7 @@
 				EC2A0FE02558A549005069FA /* SceneDelegate.swift */,
 				ECBD5E03256CAB020073C152 /* Models */,
 				EC7AABA6256C9D8D004F7EDB /* Views */,
+				ECBD5E04256CAB360073C152 /* Controllers */,
 				EC2A0FEA2558A54A005069FA /* Assets.xcassets */,
 				EC2A0FEC2558A54A005069FA /* LaunchScreen.storyboard */,
 				EC2A0FEF2558A54A005069FA /* Info.plist */,
@@ -149,7 +150,6 @@
 				EC2A0FE42558A549005069FA /* Main.storyboard */,
 				EC55A8192589CB95004BBFFB /* HistoryTableViewCell.swift */,
 				ECD8A6FE256DFC9E0059384C /* UITextField_Extensions.swift */,
-				ECBD5E04256CAB360073C152 /* Controllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
