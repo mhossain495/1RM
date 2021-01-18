@@ -46,6 +46,7 @@ class PRViewController: UIViewController {
     }
 
     
+    
 
     
 }
@@ -62,7 +63,7 @@ extension PRViewController: UITableViewDataSource {
     
     // Return the number of rows for table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return historicalDataArray.count 
     }
     
     // Provide a cell for each row
@@ -75,6 +76,11 @@ extension PRViewController: UITableViewDataSource {
         cell.cardView(cell: cell)
         
         // Get historical max data from array and set cell label data
+        let historicalData = historicalDataArray[indexPath.row]
+        // cell.dateLabel?.text = historicalData.date
+        cell.exerciseLabel?.text = historicalData.exercise
+        cell.historicMaxLabel?.text = String(format: "%.0f", historicalData.max)
+        // cell.exerciseImage.image =
         
         return cell
     }
