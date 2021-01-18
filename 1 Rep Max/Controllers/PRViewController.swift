@@ -24,10 +24,26 @@ class PRViewController: UIViewController {
         historyTableView.delegate = self
         historyTableView.dataSource = self
         
+        fetchData()
     }
     
     
-
+    //MARK: - Core Data Methods
+    func fetchData() {
+        
+        // Fetch data from Core Data to display in tableview
+        do {
+            historicalDataArray = try context.fetch(HistoricalEntity.fetchRequest())
+            
+            // Reload table view data and run task in main thread
+            DispatchQueue.main.async {
+                self.historyTableView.reloadData()
+            }
+            
+        } catch {
+            print("Error fetching data from context: \(error)")
+        }
+    }
 
     
 
@@ -57,6 +73,8 @@ extension PRViewController: UITableViewDataSource {
         
         // Configure cell with card shape and shadow effect
         cell.cardView(cell: cell)
+        
+        // Get historical max data from array and set cell label data
         
         return cell
     }
