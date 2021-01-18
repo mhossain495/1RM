@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class PRViewController: UIViewController {
@@ -14,6 +15,8 @@ class PRViewController: UIViewController {
     
     var historicalDataArray = [HistoricalEntity]()
     
+    // Access to context of persistent container to allow app to interact with database
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,13 @@ class PRViewController: UIViewController {
         historyTableView.dataSource = self
         
     }
+    
+    
 
+
+    
+
+    
 }
 //MARK: - TableView Delegate
 
@@ -53,3 +62,4 @@ extension PRViewController: UITableViewDataSource {
     }
     
 }
+
