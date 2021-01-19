@@ -101,15 +101,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-8Q-rIZ" userLabel="Exercise Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-8Q-rIZ" userLabel="Save Button">
                                                 <rect key="frame" x="0.0" y="123.66666666666669" width="375" height="104.66666666666669"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="Save">
                                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="excerciseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvo-bP-Hei"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

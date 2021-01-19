@@ -24,14 +24,16 @@ class PRViewController: UIViewController {
         historyTableView.delegate = self
         historyTableView.dataSource = self
         
+        // Load historical exercise data from Core Data
         fetchData()
     }
     
     
     //MARK: - Core Data Methods
+    
+    // Fetch data from Core Data to display in tableview
     func fetchData() {
         
-        // Fetch data from Core Data to display in tableview
         do {
             historicalDataArray = try context.fetch(HistoricalEntity.fetchRequest())
             
@@ -39,23 +41,36 @@ class PRViewController: UIViewController {
             DispatchQueue.main.async {
                 self.historyTableView.reloadData()
             }
-            
         } catch {
             print("Error fetching data from context: \(error)")
         }
     }
 
     
-    
-
-    
+    // Create new HistoricalEntity Object when user taps Save button in CalculateViewController
+    func addData() {
+        let newData = HistoricalEntity(context: context)
+        newData.date = Date()
+        newData.exercise = "Placeholder Exercise"
+        newData.max = Float(225)
+        
+        // Save the new one rep max data to Core Data
+        do {
+        try context.save()
+        } catch {
+            print("Error saving data to context: \(error)")
+        }
+        
+        // Re-fetch the data, which will include the newly added object
+        fetchData()
+        
+    }
 }
 //MARK: - TableView Delegate
 
 extension PRViewController: UITableViewDelegate {
 
 }
-
 
 //MARK: - TableView DataSource
 
