@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import CoreData
 
 class CalculateViewController: UIViewController {
 
     var maxCalculator = MaxCalculator()
     var selectedExercise: String?
     
+    // Array of historical one rep max data objects
+    var historicalDataArray = [HistoricalEntity]()
     
+    // Access to context of persistent container to allow app to interact with database
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +107,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightPlusButton: UIImageView!
     @IBOutlet weak var weightMinusButton: UIImageView!
     
-    // Repls plus and minus images
+    // Reps plus and minus images
     @IBOutlet weak var repsPlusButton: UIImageView!
     @IBOutlet weak var repsMinusButton: UIImageView!
     
@@ -119,6 +124,10 @@ class CalculateViewController: UIViewController {
     }
     
  
+    
+    
+    
+    
 
 }
 

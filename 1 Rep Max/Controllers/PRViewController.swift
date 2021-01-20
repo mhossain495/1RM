@@ -13,6 +13,7 @@ class PRViewController: UIViewController {
     
     @IBOutlet weak var historyTableView: UITableView!
     
+    // Array of historical one rep max data objects
     var historicalDataArray = [HistoricalEntity]()
     
     // Access to context of persistent container to allow app to interact with database
