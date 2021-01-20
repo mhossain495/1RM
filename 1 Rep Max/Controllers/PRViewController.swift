@@ -30,10 +30,15 @@ class PRViewController: UIViewController {
 
     }
     
+    // Call fetchData before view is loaded to reload table view data
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+    }
     
     //MARK: - Core Data Methods
     
-    // Fetch data from Core Data to display in tableview
+    // Fetch data from Core Data and refresh to display in tableview
     func fetchData() {
         
         do {
@@ -48,25 +53,6 @@ class PRViewController: UIViewController {
         }
     }
 
-    
-    // Create new HistoricalEntity Object when user taps Save button in CalculateViewController
-    func addData() {
-        let newData = HistoricalEntity(context: context)
-        newData.date = Date()
-        newData.exercise = "Placeholder Exercise"
-        newData.max = Float(225)
-        
-        // Save the new one rep max data to Core Data
-        do {
-        try context.save()
-        } catch {
-            print("Error saving data to context: \(error)")
-        }
-        
-        // Re-fetch the data, which will include the newly added object
-        fetchData()
-        
-    }
 }
 //MARK: - TableView Delegate
 

@@ -127,6 +127,7 @@ class CalculateViewController: UIViewController {
         
         // Save one rep max information to Core Data
         addData()
+       
     }
     
     //MARK: - Core Data Methods
@@ -135,8 +136,8 @@ class CalculateViewController: UIViewController {
     func addData() {
         let newData = HistoricalEntity(context: context)
         newData.date = Date()
-        newData.exercise = "Placeholder Exercise 2"
-        newData.max = Float(225)
+        newData.exercise = exerciseButton.currentTitle
+        newData.max = Float(oneRepMax.text!) ?? 0
         
         // Save the new one rep max data to Core Data
         do {
@@ -144,12 +145,10 @@ class CalculateViewController: UIViewController {
         } catch {
             print("Error saving data to context: \(error)")
         }
-        
     }
     
-    
-    
 
+    
 }
 
 
