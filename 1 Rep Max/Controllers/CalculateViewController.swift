@@ -123,8 +123,29 @@ class CalculateViewController: UIViewController {
         exerciseButton.setTitle(selectedExercise, for: .normal)
     }
     
- 
+    @IBAction func saveButton(_ sender: UIButton) {
+        
+        // Save one rep max information to Core Data
+        addData()
+    }
     
+    //MARK: - Core Data Methods
+        
+    // Create new HistoricalEntity Object when user taps Save button in CalculateViewController
+    func addData() {
+        let newData = HistoricalEntity(context: context)
+        newData.date = Date()
+        newData.exercise = "Placeholder Exercise 2"
+        newData.max = Float(225)
+        
+        // Save the new one rep max data to Core Data
+        do {
+        try context.save()
+        } catch {
+            print("Error saving data to context: \(error)")
+        }
+        
+    }
     
     
     

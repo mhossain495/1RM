@@ -27,6 +27,7 @@ class PRViewController: UIViewController {
         
         // Load historical exercise data from Core Data
         fetchData()
+
     }
     
     

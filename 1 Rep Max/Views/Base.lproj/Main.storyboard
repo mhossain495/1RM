@@ -107,6 +107,9 @@
                                                 <state key="normal" title="Save">
                                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYo-qs-Neb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
