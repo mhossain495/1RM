@@ -30,7 +30,7 @@ class PRViewController: UIViewController {
 
     }
     
-    // Call fetchData before view is loaded to reload table view data
+    // Call fetchData before view is loaded to reload tableview data
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
@@ -53,7 +53,37 @@ class PRViewController: UIViewController {
         }
     }
 
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        // Create swipe action
+        let action = UIContextualAction(style: .destructive, title: "Delete", handler: { (action, view, completionHandler) in
+        
+            // Which object or cell to remove
+            let dataToRemove = self.historicalDataArray[indexPath.row]
+            
+            
+            // Remove or delete the object frome Core Data
+            self.context.delete(dataToRemove)
+            
+            // Save the data after removing
+            
+            do {
+                try self.context.save()
+            } catch {
+                
+            }
+            
+            // Re-fetch the data
+            self.fetchData()
+
+    }
+    
+        // Return swipe actions
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
 }
+
 //MARK: - TableView Delegate
 
 extension PRViewController: UITableViewDelegate {
@@ -87,6 +117,10 @@ extension PRViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    
+    
+    
     
 }
 

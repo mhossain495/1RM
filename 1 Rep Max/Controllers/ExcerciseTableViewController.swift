@@ -87,7 +87,7 @@ class ExcerciseTableViewController: UITableViewController {
     }
     
     
-
+    // Pass selected exercise to CalculateViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let CalculateVC = segue.destination as? CalculateViewController {
