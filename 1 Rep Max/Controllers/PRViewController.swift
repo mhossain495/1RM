@@ -53,12 +53,14 @@ class PRViewController: UIViewController {
         }
     }
 
+    //MARK: - TableView Delete Method
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         // Create swipe action
-        let action = UIContextualAction(style: .destructive, title: "Delete", handler: { (action, view, completionHandler) in
-        
-            // Which object or cell to remove
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            // Object or cell to remove based on indexPath row selected
             let dataToRemove = self.historicalDataArray[indexPath.row]
             
             
@@ -75,13 +77,14 @@ class PRViewController: UIViewController {
             
             // Re-fetch the data
             self.fetchData()
-
-    }
-    
+        }
+        
+        
         // Return swipe actions
         return UISwipeActionsConfiguration(actions: [action])
     }
     
+
 }
 
 //MARK: - TableView Delegate
@@ -117,10 +120,6 @@ extension PRViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
-    
     
 }
 
