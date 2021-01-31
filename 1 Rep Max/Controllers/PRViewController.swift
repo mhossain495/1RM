@@ -113,12 +113,27 @@ extension PRViewController: UITableViewDataSource {
         
         // Get historical max data from array and set cell label data
         let historicalData = historicalDataArray[indexPath.row]
-        // cell.dateLabel?.text = historicalData.date
         cell.exerciseLabel?.text = historicalData.exercise
         cell.historicMaxLabel?.text = String(format: "%.0f", historicalData.max)
-        // cell.exerciseImage.image =
+        cell.dateLabel?.text =  historicalData.date?.dateToString()
         
+        // cell.exerciseImage.image =
+        print(cell.dateLabel.text!)
         return cell
+    }
+    
+}
+
+
+//MARK: - Date Extension Function
+
+// Function converts Date to string to display in UILabel
+extension Date {
+
+    func dateToString(format: String = "MMM d, yyyy") -> String {
+    let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
     
 }
