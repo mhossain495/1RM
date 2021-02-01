@@ -38,11 +38,19 @@ class PRViewController: UIViewController {
     
     //MARK: - Core Data Methods
     
-    // Fetch data from Core Data and refresh to display in tableview
+    // Fetch data from Core Data, sort by date, and refresh to display sorted data in tableview
     func fetchData() {
         
         do {
+            
+            let fetchRequest = HistoricalEntity.fetchRequest() as NSFetchRequest<HistoricalEntity>
+            
             historicalDataArray = try context.fetch(HistoricalEntity.fetchRequest())
+            
+            let sort = NSSortDescriptor(key: "date", ascending: false)
+            fetchRequest.sortDescriptors = [sort]
+            
+            self.historicalDataArray = try context.fetch(fetchRequest)
             
             // Reload table view data and run task in main thread
             DispatchQueue.main.async {
@@ -62,7 +70,6 @@ class PRViewController: UIViewController {
             
             // Object or cell to remove based on indexPath row selected
             let dataToRemove = self.historicalDataArray[indexPath.row]
-            
             
             // Remove or delete the object frome Core Data
             self.context.delete(dataToRemove)
