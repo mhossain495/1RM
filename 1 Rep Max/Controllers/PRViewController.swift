@@ -86,7 +86,6 @@ class PRViewController: UIViewController {
             self.fetchData()
         }
         
-        
         // Return swipe actions
         return UISwipeActionsConfiguration(actions: [action])
     }

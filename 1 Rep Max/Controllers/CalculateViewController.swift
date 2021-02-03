@@ -146,11 +146,24 @@ class CalculateViewController: UIViewController {
             print("Error saving data to context: \(error)")
         }
     }
-    
 
-    
+    // Function to limit character entry in weight and reps text fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // Prevent "0" as the first character from being entered
+        if textField.text?.count == 0 && string == "0" {
+            return false
+        }
+        
+        // Limit the number of digits to 4
+        if ((textField.text!) + string).count > 4 {
+            return false
+        }
+        
+        return true
+
+    }
 }
-
 
 //MARK: - UITextFieldDelegate
 
