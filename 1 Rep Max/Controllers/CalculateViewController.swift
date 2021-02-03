@@ -150,21 +150,25 @@ class CalculateViewController: UIViewController {
     // Function to limit character entry in weight and reps text fields
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // Prevent "0" as the first character from being entered
-        if textField.text?.count == 0 && string == "0" {
-            return false
-        }
-        
-        // Limit the number of digits to 4
-        if ((textField.text!) + string).count > 4 {
-            return false
+        // Prevent "0" as the first character from being entered and limit the number of digits to 3 or 4 based on text field
+        if textField == weightTextField {
+            if ((weightTextField.text!) + string).count > 4 || (weightTextField.text?.count == 0 && string == "0") {
+                return false
+            }
+        } else if textField == repsTextField {
+            
+            if ((repsTextField.text!) + string).count > 3 || (repsTextField.text?.count == 0 && string == "0") {
+                return false
+            }
+            
+        } else {
+            // Do nothing
         }
         
         return true
-
     }
+    
 }
-
 //MARK: - UITextFieldDelegate
 
 extension CalculateViewController: UITextFieldDelegate {
