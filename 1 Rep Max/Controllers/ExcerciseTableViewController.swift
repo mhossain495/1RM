@@ -39,7 +39,7 @@ class ExcerciseTableViewController: UITableViewController {
     }
     
     // Variable to save currently selected index path
-    var selectedIndexPath: IndexPath? = IndexPath(row: 0, section: 0)
+    var selectedIndexPath: IndexPath?
     
     // Add cell animations when row is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -47,25 +47,10 @@ class ExcerciseTableViewController: UITableViewController {
         // Remove gray background color that remains after user taps cell
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Peform unwind segue and pass value to exercise button in CalculateVC if same row selected
-        if indexPath == selectedIndexPath {
-            performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
-        }
-        
-        
-        // Toggle checkmark on old cell off and on for new cell
-        let newCell = tableView.cellForRow(at: indexPath)
-        if newCell?.accessoryType == UITableViewCell.AccessoryType.none {
-            newCell?.accessoryType = UITableViewCell.AccessoryType.checkmark
-        }
-        
-        let oldCell = tableView.cellForRow(at: selectedIndexPath!)
-        if oldCell?.accessoryType == UITableViewCell.AccessoryType.checkmark {
-            oldCell?.accessoryType = UITableViewCell.AccessoryType.none
-        }
         // Save selected index path
         selectedIndexPath = indexPath
         
+        // Peform unwind segue and pass value to exercise button in CalculateVC
        performSegue(withIdentifier: "unwindToCalculateVC", sender: self)
 
     }
