@@ -22,7 +22,7 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
         weightTextField.delegate = self
         repsTextField.delegate = self
         
@@ -63,14 +63,25 @@ class CalculateViewController: UIViewController {
                 weightValue += 1
                 weightTextField.text = String(format: "%.0f", weightValue)
             case weightMinusButton:
-                weightValue -= 1
-                weightTextField.text = String(format: "%.0f", weightValue)
+                // Set minimum weight value to 0
+                if weightValue <= 0 {
+                    weightTextField.text = "0"
+                } else {
+                    weightValue -= 1
+                    weightTextField.text = String(format: "%.0f", weightValue)
+                }
             case repsPlusButton:
                 repsValue += 1
                 repsTextField.text = String(format: "%.0f", repsValue)
             case repsMinusButton:
-                repsValue -= 1
-                repsTextField.text = String(format: "%.0f", repsValue)
+                // Set minimum reps value to 0
+                if repsValue <= 0 {
+                    repsTextField.text = "0"
+                } else {
+                    repsValue -= 1
+                    repsTextField.text = String(format: "%.0f", repsValue)
+                }
+                
             default:
                 break
             }
