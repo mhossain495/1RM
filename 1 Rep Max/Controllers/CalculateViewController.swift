@@ -204,9 +204,13 @@ extension CalculateViewController {
         let repsValue = Float(repsTextField.text!) ?? Float(0)
         
         // Calculate one rep max with values obtained from weight and reps text fields
-        let max = maxCalculator.calculateMax(weight: weightValue, reps: repsValue)
-        oneRepMax.text = String(format: "%.0f", max)
+        var max = maxCalculator.calculateMax(weight: weightValue, reps: repsValue)
         
+        // Set minimum value to 0 if calculated one rep max is negative
+        if max <= 0 {
+            max = 0
+            oneRepMax.text = String(format: "%.0f", max)
+        }
         
         // Calculate max weight for various reps with values obtained from weight and reps text fields
         let twoRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 2)
