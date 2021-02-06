@@ -122,7 +122,7 @@ extension PRViewController: UITableViewDataSource {
         cell.exerciseLabel?.text = historicalData.exercise
         cell.historicMaxLabel?.text = String(format: "%.0f", historicalData.max)
         cell.dateLabel?.text =  historicalData.date?.dateToString()
-        
+        cell.exerciseImage.image = #imageLiteral(resourceName: "bench press")
         // cell.exerciseImage.image =
         print(cell.dateLabel.text!)
         return cell

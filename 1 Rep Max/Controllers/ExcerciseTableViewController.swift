@@ -55,6 +55,7 @@ class ExcerciseTableViewController: UITableViewController {
         exerciseCell.textLabel?.text = exerciseArray[indexPath.row]
         
         return exerciseCell
+    
     }
     
 //MARK: - Navigation
