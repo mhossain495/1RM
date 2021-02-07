@@ -209,8 +209,10 @@ extension CalculateViewController {
         // Set minimum value to 0 if calculated one rep max is negative
         if max <= 0 {
             max = 0
-            oneRepMax.text = String(format: "%.0f", max)
         }
+        
+        // Display one rep max in text field
+        oneRepMax.text = String(format: "%.0f", max)
         
         // Calculate max weight for various reps with values obtained from weight and reps text fields
         let twoRM = maxCalculator.calculateAllMax(oneRepMax: max, reps: 2)
