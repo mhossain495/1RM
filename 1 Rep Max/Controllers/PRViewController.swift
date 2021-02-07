@@ -42,7 +42,6 @@ class PRViewController: UIViewController {
     func fetchData() {
         
         do {
-            
             let fetchRequest = HistoricalEntity.fetchRequest() as NSFetchRequest<HistoricalEntity>
             
             historicalDataArray = try context.fetch(HistoricalEntity.fetchRequest())
@@ -75,22 +74,26 @@ class PRViewController: UIViewController {
             self.context.delete(dataToRemove)
             
             // Save the data after removing
-            
             do {
                 try self.context.save()
             } catch {
                 
             }
-            
             // Re-fetch the data
             self.fetchData()
         }
-        
         // Return swipe actions
         return UISwipeActionsConfiguration(actions: [action])
     }
     
-
+    // Override to support editing the table view.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
 }
 
 //MARK: - TableView Delegate
@@ -122,14 +125,23 @@ extension PRViewController: UITableViewDataSource {
         cell.exerciseLabel?.text = historicalData.exercise
         cell.historicMaxLabel?.text = String(format: "%.0f", historicalData.max)
         cell.dateLabel?.text =  historicalData.date?.dateToString()
-        cell.exerciseImage.image = #imageLiteral(resourceName: "bench press")
-        // cell.exerciseImage.image =
-        print(cell.dateLabel.text!)
+        
+        // Display exercise image based on cell text label
+        switch cell.exerciseLabel?.text  {
+        case "Bench Press":
+            cell.exerciseImage.image = #imageLiteral(resourceName: "bench press")
+        case "Deadlift":
+            cell.exerciseImage.image = #imageLiteral(resourceName: "deadlift")
+        case "Squat":
+            cell.exerciseImage.image = #imageLiteral(resourceName: "squat")
+        default:
+            break
+        }
+
         return cell
     }
     
 }
-
 
 //MARK: - Date Extension Function
 
@@ -144,13 +156,5 @@ extension Date {
     
 }
 
-// Override to support editing the table view.
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == .delete {
-        // Delete the row from the data source
-        tableView.deleteRows(at: [indexPath], with: .fade)
-    } else if editingStyle == .insert {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-}
+
 

@@ -149,6 +149,7 @@
 			children = (
 				EC2A0FE42558A549005069FA /* Main.storyboard */,
 				EC55A8192589CB95004BBFFB /* HistoryTableViewCell.swift */,
+				ECFD23C7259689AE004EC69A /* ExerciseList.swift */,
 				ECD8A6FE256DFC9E0059384C /* UITextField_Extensions.swift */,
 			);
 			path = Views;
@@ -158,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				ECBD5E10256CAB9C0073C152 /* MaxCalculator.swift */,
-				ECFD23C7259689AE004EC69A /* ExerciseList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
